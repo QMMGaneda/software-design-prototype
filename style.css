@@ -27,7 +27,7 @@ body {
   background: #f5a6a6;
   color: #000000;
   top: 50%;
-  left: 50%;
+  left: 23.5%;
   position: absolute;
   transform: translate(-50%, -50%);
   box-sizing: border-box;
@@ -91,3 +91,237 @@ h1 {
 .login a:hover{
     color: #ffc107;
 }
+
+/* Images  */
+.image-slider {
+    width: 50%;
+    height: 75%;
+    position: absolute;
+    top: 100px;
+    left: 48%;
+    overflow: hidden;
+    border-radius: 15px;
+  }
+  
+  .image-slider img {
+    border-radius: 15px;
+  }
+  
+  .slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.3s;
+    animation: imageSlider 30s infinite;
+  }
+  .active {
+    opacity: 1;
+  }
+  @keyframes imageSlider1 {
+    0%,
+    2.5% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    5%,
+    7.5% {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+    10% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes imageSlider2 {
+    0%,
+    12.5% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    15%,
+    17.5% {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+    20% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes imageSlider3 {
+    0%,
+    22.5% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    25%,
+    27.5% {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+    30% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes imageSlider4 {
+    0%,
+    32.5% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    35%,
+    37.5% {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+    40% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    
+  }
+
+  @keyframes imageSlider5 {
+    0%,
+    42.5% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    45%,
+    47.5% {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+    50% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    
+  }
+  @keyframes imageSlider6 {
+    0%,
+    52.5% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    55%,
+    57.5% {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+    60% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    
+  }
+  @keyframes imageSlider7 {
+    0%,
+    62.5% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    65%,
+    67.5% {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+    70% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    
+  }
+  @keyframes imageSlider8 {
+    0%,
+    72.5% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    75%,
+    77.5% {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+    80% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    
+  }
+  @keyframes imageSlider9 {
+    0%,
+    82.5% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    85%,
+    87.5% {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+    90% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    
+  }
+  @keyframes imageSlider10 {
+    0%,
+    92.5% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    95%,
+    97.5% {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    
+  }
+  
+  .slider-image:nth-child(1) {
+    animation: imageSlider1 15s infinite;
+  }
+  
+  .slider-image:nth-child(2) {
+    animation: imageSlider2 15s infinite;
+  }
+  
+  .slider-image:nth-child(3) {
+    animation: imageSlider3 15s infinite;
+  }
+  
+  .slider-image:nth-child(4) {
+    animation: imageSlider4 15s infinite;
+  }
+  .slider-image:nth-child(5) {
+    animation: imageSlider5 15s infinite;
+  }
+  .slider-image:nth-child(6) {
+    animation: imageSlider6 15s infinite;
+  }
+  .slider-image:nth-child(7) {
+    animation: imageSlider7 15s infinite;
+  }
+  .slider-image:nth-child(8) {
+    animation: imageSlider8 15s infinite;
+  }
+  .slider-image:nth-child(9) {
+    animation: imageSlider9 15s infinite;
+  }
+  .slider-image:nth-child(10) {
+    animation: imageSlider10 15s infinite;
+  }
+  /* end */

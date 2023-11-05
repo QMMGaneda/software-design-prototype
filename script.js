@@ -22,7 +22,7 @@ function validate() {
   }
 }
 function gotothelogin() {
-  var newPageURL = 'index.html';
+  var newPageURL = "index.html";
   window.location.href = newPageURL;
   return false;
 }
