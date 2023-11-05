@@ -1,18 +1,33 @@
+<!-- tenant page -->
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="script.js"></script>
     <title>Tenant Page</title>
   </head>
   <body>
     <h1>Welcome to the Tenant's Page</h1>
-    <form enctype="multipart/form-data">
-      <p>Upload Receipt</p>
-      <input type="file" name="receiptFile" id="receiptFile" />
-      <input type="submit" name="submit" value="Upload Receipt" />
+    <form action="fileupload.php" enctype="multipart/form-data" method="post">
+      <label class="custom-uploader" for="file">Upload Your Receipt</label>
+      <input
+        id="file"
+        accept="image/jpeg,image/png"
+        name="fileToUpload"
+        type="file"
+      />
+      <button class="btn btn-success" name="submit" type="submit">
+        Upload File
+      </button>
     </form>
+    <div>
+      <form>
+        <button id="exitButton" onclick="gotothelogin()">Exit</button>
+      </form>
+    </div>
+    
   </body>
 </html>
