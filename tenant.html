@@ -12,10 +12,12 @@
   <body>
     <h1>Welcome to the Tenant's Page</h1>
     <form action="fileupload.php" enctype="multipart/form-data" method="post">
-      <label class="custom-uploader" for="file">Upload Your Receipt</label>
+      <label class="custom-uploader" for="file">
+      Upload Your Receipt. Please upload the photo of the reciept in jpeg or png format.
+      </label>
       <input
         id="file"
-        accept="image/jpeg,image/png"
+        accept="image/jpeg,image/png, image/jpg"
         name="fileToUpload"
         type="file"
       />
@@ -25,7 +27,7 @@
     </form>
     <div>
       <form>
-        <button id="exitButton" onclick="gotothelogin()">Exit</button>
+        <button id="exitButton" onclick=" return gotothelogin()">Exit</button>
       </form>
     </div>
     

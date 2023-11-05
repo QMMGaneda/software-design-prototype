@@ -24,6 +24,7 @@ function validate() {
 function gotothelogin() {
   var newPageURL = 'index.html';
   window.location.href = newPageURL;
+  return false;
 }
 function togglePassword() {
   var x = document.getElementById("pass");
