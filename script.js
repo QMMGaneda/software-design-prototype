@@ -9,11 +9,11 @@ function validate() {
   var TPassword = "123";
 
   if (username === LDUsername && password === LDPassword) {
-    alert("Login Successful");
+    // alert("Login Successful");
     window.location.href = "landlord.html";
     return false;
   } else if (username === TUsername && password === TPassword) {
-    alert("Login Successful");
+    // alert("Login Successful");
     window.location.href = "tenant.html";
     return false;
   } else {

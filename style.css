@@ -114,7 +114,7 @@ h1 {
     position: absolute;
     opacity: 0;
     transition: opacity 0.3s;
-    animation: imageSlider 30s infinite;
+    animation: imageSlider 120s infinite;
   }
   .active {
     opacity: 1;
@@ -290,38 +290,37 @@ h1 {
     }
     
   }
-  
   .slider-image:nth-child(1) {
-    animation: imageSlider1 15s infinite;
+    animation: imageSlider1 20s infinite;
   }
   
   .slider-image:nth-child(2) {
-    animation: imageSlider2 15s infinite;
+    animation: imageSlider2 20s infinite;
   }
   
   .slider-image:nth-child(3) {
-    animation: imageSlider3 15s infinite;
+    animation: imageSlider3 20s infinite;
   }
   
   .slider-image:nth-child(4) {
-    animation: imageSlider4 15s infinite;
+    animation: imageSlider4 20s infinite;
   }
   .slider-image:nth-child(5) {
-    animation: imageSlider5 15s infinite;
+    animation: imageSlider5 20s infinite;
   }
   .slider-image:nth-child(6) {
-    animation: imageSlider6 15s infinite;
+    animation: imageSlider6 20s infinite;
   }
   .slider-image:nth-child(7) {
-    animation: imageSlider7 15s infinite;
+    animation: imageSlider7 20s infinite;
   }
   .slider-image:nth-child(8) {
-    animation: imageSlider8 15s infinite;
+    animation: imageSlider8 20s infinite;
   }
   .slider-image:nth-child(9) {
-    animation: imageSlider9 15s infinite;
+    animation: imageSlider9 20s infinite;
   }
   .slider-image:nth-child(10) {
-    animation: imageSlider10 15s infinite;
+    animation: imageSlider10 20s infinite;
   }
   /* end */
