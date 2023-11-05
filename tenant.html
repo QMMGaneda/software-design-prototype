@@ -11,24 +11,32 @@
   </head>
   <body>
     <h1>Welcome to the Tenant's Page</h1>
+
+    <!-- Exit button -->
     <div>
       <form>
         <button id="exitButton" onclick=" return gotothelogin()">Exit</button>
       </form>
     </div>
-    <form action="fileupload.php" enctype="multipart/form-data" method="post">
-      <label class="custom-uploader" for="file">
-      Upload Your Receipt. Please upload the photo of the reciept in jpeg or png format.
-      </label>
-      <input
-        id="file"
-        accept="image/jpeg,image/png, image/jpg"
-        name="fileToUpload"
-        type="file"
-      />
-      <button class="btn btn-success" name="submit" type="submit">
-        Upload File
-      </button>
-    </form>
+    <!-- End -- Exit button -->
+
+    <!-- Upload file -->
+    <div>
+      <form action="fileupload.php" enctype="multipart/form-data" method="post">
+        <label class="custom-uploader" for="file">
+        Upload Your Receipt. Please upload the photo of the reciept in jpeg or png format.
+        </label>
+        <input
+          id="file"
+          accept="image/jpeg,image/png, image/jpg"
+          name="fileToUpload"
+          type="file"
+        />
+        <button class="btn btn-success" name="submit" type="submit">
+          Upload File
+        </button>
+      </form>
+    </div>
+    <!-- End -- Upload file -->
   </body>
 </html>
