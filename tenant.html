@@ -10,18 +10,21 @@
     <title>Tenant Page</title>
   </head>
   <body>
-    <h1>Welcome to the Tenant's Page</h1>
+    <div class = "pagetitle">
+      <h1>Welcome to the Tenant's Page</h1>
+    </div>
+    
 
     <!-- Exit button -->
-    <div>
+    <div class = "Exit">
       <form>
-        <button id="exitButton" onclick=" return gotothelogin()">Exit</button>
+        <button id="exitButton" onclick="return gotothelogin()">Exit</button>
       </form>
     </div>
     <!-- End -- Exit button -->
 
     <!-- Upload file -->
-    <div>
+    <div class = "fileupload">
       <form action="fileupload.php" enctype="multipart/form-data" method="post">
         <label class="custom-uploader" for="file">
           Upload Your Receipt. Please upload the photo of the reciept in jpeg or
@@ -39,5 +42,17 @@
       </form>
     </div>
     <!-- End -- Upload file -->
+    <p>Your Due Date: <span id="due_date"></span></p>
   </body>
+  <script>
+    // Retrieve and display the due date from local storage
+    const tenantId = "2a"; // Replace with the tenant's ID
+    const dueDate = localStorage.getItem(`tenant_${tenantId}`);
+    const dueDateElement = document.getElementById("due_date");
+    if (dueDate) {
+      dueDateElement.textContent = dueDate;
+    } else {
+      dueDateElement.textContent = "Due date not set.";
+    }
+  </script>
 </html>

@@ -11,9 +11,12 @@
 
     <title>New page</title>
     <body>
-      <h1>WELCOME TO LANDLORD'S PAGE.</h1>
+      <div class = "pagetitle"> 
+        <h1>WELCOME TO LANDLORD'S PAGE.</h1>
+      </div>
+      
       <!-- Exit Button -->
-      <div>
+      <div class = "Exit">
         <form>
           <button id="exitButton" onclick="return gotothelogin()">Exit</button>
         </form>
@@ -28,6 +31,92 @@
         </ul>
       </div>
       <!-- End -- View Tenant Receipts -->
+
+      <!-- Experiment -->
+      <form>
+        <label for="tenant_id">Tenant ID:</label>
+        <input type="text" id="tenant_id" />
+        <button onclick="setDueDate()">Set Due Date</button>
+      </form>
+
+      <!-- Table to display tenant information -->
+    <table>
+      <thead>
+        <tr>
+          <th>Tenant ID</th>
+          <th>Tenant Name</th>
+          <th>Due Date</th>
+        </tr>
+      </thead>
+      <tbody id="tenantList">
+        <!-- Tenant information will be added here dynamically -->
+      </tbody>
+    </table>
+
     </body>
+
+    <script>
+      function setDueDate() {
+        const tenantId = document.getElementById("tenant_id").value;
+        const lastDay = getLastDayOfCurrentMonth();
+        const formattedDate = formatDate(lastDay);
+
+        // Store last day of the month in local storage
+        localStorage.setItem(`tenant_${tenantId}`, formattedDate);
+        alert("Due date set successfully.");
+
+        // Refresh the tenant list
+        displayTenantList();
+      }
+
+      function getLastDayOfCurrentMonth() {
+        const today = new Date();
+        const nextMonth = new Date(today);
+        nextMonth.setMonth(today.getMonth() + 1);
+        nextMonth.setDate(0);
+        return nextMonth;
+      }
+
+      function formatDate(date) {
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, "0");
+        const day = String(date.getDate()).padStart(2, "0");
+        return `${year}-${month}-${day}`;
+      }
+
+      // Function to display the tenant list
+      function displayTenantList() {
+        const tenantList = document.getElementById("tenantList");
+        tenantList.innerHTML = "";
+
+        for (let i = 0; i < localStorage.length; i++) {
+          const key = localStorage.key(i);
+          if (key.startsWith("tenant_")) {
+            const tenantId = key.replace("tenant_", "");
+            const dueDate = localStorage.getItem(key);
+            const tenantName = getTenantName(tenantId); // Implement this function
+
+            const row = document.createElement("tr");
+            row.innerHTML = `
+              <td>${tenantId}</td>
+              <td>${tenantName}</td>
+              <td>${dueDate}</td>
+            `;
+
+            tenantList.appendChild(row);
+          }
+        }
+      }
+
+      // Implement a function to retrieve tenant name based on ID
+      function getTenantName(tenantId) {
+        // You can implement a lookup logic or retrieve this from another source.
+        // For simplicity, return a placeholder.
+        return `Tenant ${tenantId}`;
+      }
+
+      // Initial display of tenant list
+      displayTenantList();
+    </script>
   </head>
 </html>
