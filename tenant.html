@@ -25,6 +25,7 @@
 
     <!-- Upload file -->
     <div class = "fileupload">
+      <p>Your Due Date: <span id="due_date"></span></p>
       <form action="fileupload.php" enctype="multipart/form-data" method="post">
         <label class="custom-uploader" for="file">
           Upload Your Receipt. Please upload the photo of the reciept in jpeg or
@@ -42,7 +43,6 @@
       </form>
     </div>
     <!-- End -- Upload file -->
-    <p>Your Due Date: <span id="due_date"></span></p>
   </body>
   <script>
     // Retrieve and display the due date from local storage
@@ -52,7 +52,7 @@
     if (dueDate) {
       dueDateElement.textContent = dueDate;
     } else {
-      dueDateElement.textContent = "Due date not set.";
+      dueDateElement.textContent = "Paid";
     }
   </script>
 </html>

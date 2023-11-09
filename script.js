@@ -2,19 +2,35 @@ function validate() {
   var username = document.getElementById("user").value;
   var password = document.getElementById("pass").value;
 
-  // Replace these values with your desired username and password
+  // Admin credentials
   var LDUsername = "admin";
   var LDPassword = "admin";
-  var TUsername = "2a";
-  var TPassword = "123";
 
+  // Array of tenants with their usernames and passwords
+  var tenants = [
+    { username: "2a", password: "123", type: "tenant" },
+    { username: "2b", password: "456", type: "tenant" },
+    { username: "3a", password: "789", type: "tenant" },
+    // Add more tenants as needed
+  ];
+
+  // Check if the provided username and password match the admin
   if (username === LDUsername && password === LDPassword) {
-    // alert("Login Successful");
     window.location.href = "landlord.html";
     return false;
-  } else if (username === TUsername && password === TPassword) {
-    // alert("Login Successful");
-    window.location.href = "tenant.html";
+  }
+
+  // Check if the provided username and password match any tenant
+  var matchedTenant = tenants.find(function (tenant) {
+    return tenant.username === username && tenant.password === password;
+  });
+
+  if (matchedTenant) {
+    if (matchedTenant.type === "tenant") {
+      window.location.href = "tenant.html";
+    } else {
+      window.location.href = "landlord.html";
+    }
     return false;
   } else {
     alert("Login Failed");
