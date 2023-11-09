@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["fileToUpload"])) {
-  $targetDirectory = "uploads/tenants/"; // Set your desired directory
+  $targetDirectory = "uploads/"; // Set your desired directory
   $targetFile = $targetDirectory . basename($_FILES["fileToUpload"]["name"]);
   $uploadOk = 1;
   $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));

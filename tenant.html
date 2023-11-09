@@ -45,14 +45,23 @@
     <!-- End -- Upload file -->
   </body>
   <script>
-    // Retrieve and display the due date from local storage
-    const tenantId = "2a"; // Replace with the tenant's ID
-    const dueDate = localStorage.getItem(`tenant_${tenantId}`);
-    const dueDateElement = document.getElementById("due_date");
-    if (dueDate) {
-      dueDateElement.textContent = dueDate;
-    } else {
-      dueDateElement.textContent = "Paid";
+    // Function to retrieve and display the due date for a given tenant ID
+    function displayDueDate(tenantId) {
+      const dueDate = localStorage.getItem(`tenant_${tenantId}`);
+      const dueDateElement = document.getElementById(`due_date_${tenantId}`);
+      if (dueDate) {
+        dueDateElement.textContent = dueDate;
+      } else {
+        dueDateElement.textContent = "Paid";
+      }
     }
+  
+    // List of tenant IDs
+    const tenantIds = ["2a", "2b", "3a"]; // Add more tenant IDs as needed
+  
+    // Loop through each tenant ID and display the due date
+    tenantIds.forEach((tenantId) => {
+      displayDueDate(tenantId);
+    });
   </script>
 </html>
