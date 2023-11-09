@@ -69,6 +69,15 @@
         displayTenantList();
       }
 
+      function removeDueDate(tenantId) {
+        // Remove the due date for the specified tenant
+        localStorage.removeItem(`tenant_${tenantId}`);
+        alert("Due date removed successfully.");
+
+        // Refresh the tenant list
+        displayTenantList();
+      }
+
       function getLastDayOfCurrentMonth() {
         const today = new Date();
         const nextMonth = new Date(today);
@@ -101,6 +110,7 @@
               <td>${tenantId}</td>
               <td>${tenantName}</td>
               <td>${dueDate}</td>
+              <td><button onclick="removeDueDate('${tenantId}')">Paid</button></td>
             `;
 
             tenantList.appendChild(row);
