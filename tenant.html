@@ -26,7 +26,11 @@
     <!-- Upload file -->
     <div class = "fileupload">
       <p>Your Due Date: <span id="due_date"></span></p>
-      <form action="fileupload.php" enctype="multipart/form-data" method="post">
+      <form action="fileupload.php" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="upload"> 
+      </form>
+      <!-- <form action="fileupload.php" enctype="multipart/form-data" method="post">
         <label class="custom-uploader" for="file">
           Upload Your Receipt. Please upload the photo of the reciept in jpeg or
           png format.
@@ -36,11 +40,12 @@
           accept="image/jpeg,image/png, image/jpg"
           name="fileToUpload"
           type="file"
+          value="file"
         />
         <button class="btn btn-success" name="submit" type="submit">
           Upload File
         </button>
-      </form>
+      </form> -->
     </div>
     <!-- End -- Upload file -->
   </body>
