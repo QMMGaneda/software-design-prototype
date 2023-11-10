@@ -16,7 +16,7 @@ function validate() {
 
   // Check if the provided username and password match the admin
   if (username === LDUsername && password === LDPassword) {
-    window.location.href = "landlord.html";
+    window.location.href = "landlord.html?username="+ username;
     return false;
   }
 
