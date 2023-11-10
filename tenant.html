@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script src="script.js"></script>
+    <script src="landlord.html"></script>
     <title>Tenant Page</title>
+    
   </head>
   <body>
     <div class = "pagetitle">
@@ -25,7 +27,14 @@
 
     <!-- Upload file -->
     <div class = "fileupload">
-      <p>Your Due Date: <span id="due_date"></span></p>
+      <p>Your Due Date: 
+        <span id="due_date_2a"></span>
+        <!-- <span id="due_date_2b"></span>
+        <span id="due_date_3a"></span> -->
+        <!-- <span id="due_date"></span> -->
+      </p>
+      
+      
       <form action="fileupload.php" method="post" enctype="multipart/form-data">
         <input type="file" name="file">
         <input type="submit" value="upload"> 
@@ -51,9 +60,12 @@
   </body>
   <script>
     // Function to retrieve and display the due date for a given tenant ID
+
     function displayDueDate(tenantId) {
       const dueDate = localStorage.getItem(`tenant_${tenantId}`);
       const dueDateElement = document.getElementById(`due_date_${tenantId}`);
+      // const dueDateElement = document.getElementById('due_date');
+      console.log(`Tenant ID: ${tenantId}, Due Date: ${dueDate}`);
       if (dueDate) {
         dueDateElement.textContent = dueDate;
       } else {
@@ -63,10 +75,11 @@
   
     // List of tenant IDs
     const tenantIds = ["2a", "2b", "3a"]; // Add more tenant IDs as needed
+    //const tenantIds = 
   
     // Loop through each tenant ID and display the due date
     tenantIds.forEach((tenantId) => {
       displayDueDate(tenantId);
     });
-  </script>
+</script>
 </html>
