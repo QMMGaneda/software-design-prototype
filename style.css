@@ -359,10 +359,51 @@ input[type="password"] {
 }
 
 /* Landlord page */
+.reciept{
+  width: 20%;
+  height: 100%;
+  margin-top: 3%;
+  margin-left: 1%;
+  padding: 100;
+  background-color: #ebdbce;
+  font-weight: bold;
+}
 
+.setDueDate{
+  width: 20%;
+  height: 100%;
+  margin-top: 3%;
+  margin-left: 1%;
+  padding: 100;
+  background-color: #ebdbce;
+  font-weight: bold;
+}
+.table{
+  width: 30%;
+  height: 100%;
+  margin-top: 3%;
+  margin-left: 1%;
+  padding: 100;
+  background-color: #ebdbce;
+  font-weight: bold;
+}
 
 /* Tenant page */
+.showdue {
+  width: 20%;
+  height: 100%;
+  margin-top: 3%;
+  margin-left: 1%;
+  padding: 100;
+  background-color: #ebdbce;
+  font-weight: bold;
+}
 .fileupload {
-  top: 8%;
-  position: absolute;
+  width: 20%;
+  height: 100%;
+  margin-top: 3%;
+  margin-left: 1%;
+  padding: 100;
+  background-color: #ebdbce;
+  font-weight: bold;
 }
